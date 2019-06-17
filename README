@@ -29,16 +29,17 @@ Also, 3 basic ML algorithms were chosen with OneVsRest classification on top for
 - Multinomial naive bayes
 - SGD
 - Logistic Regression
-The latter showed the best results, so it was picked to proceed with. However, the baseline showed relatively low
-accuracy (around 56%, showed by both accuracy_score from sklearn and Hamming score), therefore, further development was needed. After much work and experimenting, the solution became
-to include:
+The latter showed the best results, so it was picked to proceed with. However, the baseline demonstrated relatively low
+accuracy (around 56%, by both accuracy_score from sklearn and Hamming score), therefore, further development was needed. After much work, learning,
+and experimenting, the solution became to include:
  - almost all textual features from the data (11 columns)
  - text cleaning
  - grid search with cross-validation for choosing the best model
-This set-up returns accuracy around 84% which seems to be sufficient for the purposes of this task.
+ 
+This set-up shows accuracy around 84% which seems to be sufficient for the purposes of this task.
 For future improvements see IV.
 
-III. TECHNICAL REQUIREMENT, SOFTWARE, AND PERFORMANCE
+III. TECHNICAL REQUIREMENTS, SOFTWARE, AND PERFORMANCE
 The task was completed on Ubuntu 14.04 with Python 3.4. The ML library is sklearn.
 The developement machine is very old laptop Lenovo Ideapad 100 with Intel Celeron CPU and 4Gb RAM.
 Training on this antique showpiece takes ~30 minutes, any decent machine would probably do it in less than 5 minutes.
@@ -50,21 +51,21 @@ Some of them include:
 1. model-wise:
 - existing model tweaking
 - training on more data
-- including numeric features as well (probably redundant)
+- including numeric features as well (probably redundant but should be given a shot)
 - exploring other ML models on this data
 - exloring DL solutions (should work better; this was the initial direction but it was dropped after encountering
-serious problems with installing appropriate SW on my [non-]working station)
+serious problems with installing appropriate libraries on my [non-]working station)
 
 2. API/code-wise
 - testing! testing! testing! sanity (done partially), integration (since it is an API), unit testing, etc.
 - proper error handling & Success/Failure/Error Code return values for each API call (in other words,
     making it a proper API)
 - proper documentation (including this README), docstrings
-- organizing separate folders for code and data
-- implementing models versioning
-- implementing logging
+- organizing separate folders for code, models, and data 
+- models versioning
+- logging
 - getting rid of all the warnings at run-time
-- implementing REST API (should be easy with Flask)
+- REST API (should be easy with Flask)
 - providing a user with an opportunity to choose algorithms for training
   (whether DL/ML and/or inside of these categories)
 - in general, providing greater flexibility and support for various use cases (adding new training data, for instance)
