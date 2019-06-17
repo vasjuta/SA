@@ -24,9 +24,9 @@ train, test = train_test_split(seen_data, test_size=0.2, random_state=42)
 
 classifier_api = mlc.MLClassifierAPI()
 
-#call with data only
+#call with train data only
 model = classifier_api.train(train)
-#model = classifier_api.loadModel("last_model.pkl")
+
 #evaluate the model
 scores = classifier_api.evaluate(model, test)
 print(scores)
@@ -43,15 +43,17 @@ classifier_api.loadModel(model_tosave)
 unseen_data = data[-80:] #leave 15 rows in between seen and unseen to hang out to dry :)
 
 #classify the unseen data, ask to get text labels, not binarized vectors
-predicted_labels = classifier_api.classify(classifier_api.model,unseen_data,textlabels=True)
+#you can pass in the model or use None - then the same in-memory model will be used
+predicted_labels = classifier_api.classify(None,unseen_data,textlabels=True)
 
-#see them with your eyes
+#see the ground truth vs predicted labels with your eyes
 df = pd.DataFrame({"true":unseen_data["Solution Type"], "predicted":predicted_labels})
 
 df.to_csv("predictions.csv")
 #print(df)
 #looks good, though can be formatted for readability
 
+#classify single text
 single_text = str(data.iloc[-87]["Description"]) #lucky one
 label = classifier_api.classify_single_text(None,single_text)
 print("Label: {}\n Text: {}".format(label, single_text))
