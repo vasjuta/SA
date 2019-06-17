@@ -1,4 +1,4 @@
-I. Solution contents
+I. SOLUTION CONTENTS
 
 1. MLClassifier.py - API framework that supports the following operations:
     train - trains model on train data, saves it and returns it to user
@@ -20,8 +20,7 @@ with printouts of its run
 
 5. last_model.pkl & predictions.csv - last saved model and predictions for quick testing/reference
 
-
-II. Workflow and algorithms.
+II. WORKFLOW AND ALGORITHMS
 
 At first data was examined and simple baseline was developed. It included choosing just 3 main textual columns from
 the dataset which seemed to include the most relevant textual information necessary for classification -
@@ -39,12 +38,12 @@ to include:
 This set-up returns accuracy around 84% which seems to be sufficient for the purposes of this task.
 For future improvements see IV.
 
-III. Technical requirements, software, and performance.
+III. TECHNICAL REQUIREMENT, SOFTWARE, AND PERFORMANCE
 The task was completed on Ubuntu 14.04 with Python 3.4. The ML library is sklearn.
 The developement machine is very old laptop Lenovo Ideapad 100 with Intel Celeron CPU and 4Gb RAM.
 Training on this antique showpiece takes ~30 minutes, any decent machine would probably do it in less than 5 minutes.
 
-IV. Future developments, improvements, TODOs.
+IV. FUTURE DEVELOPMENTS, IMPROVEMENTS, TODOs
 As this was just a test task, very much work remains uncovered and there are lots of things to add/improve.
 Some of them include:
 
