@@ -284,19 +284,16 @@ class MLClassifierAPI(object):
               name : str, optional
                   The name of the model to load
         """
-        print(1)
+        
         if not name:
-            print(2)
             if self.model is not None:  # we can use the one we have loaded
                 print(3)
                 print("In-memory model will be used.")
                 return
             else:
-                print(4)
                 name = DEFAULT_MODEL_NAME  # get the default/last saved one
                 print("Last saved model will be used.")
         try:
-            print(5)
             self.model = joblib.load(name)
 
         except:
