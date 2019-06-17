@@ -66,7 +66,7 @@ class MLClassifierAPI(object):
                 print("File not found:", filename)
                 return None
             try:
-                data = self.loadData(filename)
+                data = self.loadDataFromFile(filename)
             except:
                 print("Data couldn't be loaded from file")
 
@@ -299,7 +299,7 @@ class MLClassifierAPI(object):
         except:
             print("Model couldn't be loaded.")
 
-    def loadData(self, filename):
+    def loadDataFromFile(self, filename):
         """Loads data from given filename; if none given, uses the only one it has :)
                 Parameters
                 ----------
