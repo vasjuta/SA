@@ -36,7 +36,7 @@ Model = namedtuple('Model', ['clf', 'binarizer', 'vectorizer', 'transformer'])
 class MLClassifierAPI(object):
 
     #class variable
-    #todo: property
+    #todo: property (which doesn't mix with namedtuple type name)
     model = None
 
     def train(self, data, filename="", modelname=""):
@@ -99,7 +99,8 @@ class MLClassifierAPI(object):
         #perform grid search
         param_grid = {"estimator__C": np.logspace(-3, 3, 5), "estimator__penalty": ["l1", "l2"]}
         CV_clf = GridSearchCV(estimator=clf, param_grid=param_grid, cv=5)
-
+        
+        #train
         best_clf = CV_clf.fit(X_tfidf, Y)
 
         #create named tuple object for the model
