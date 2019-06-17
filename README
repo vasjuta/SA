@@ -18,7 +18,7 @@ with printouts of its run
 
 4. nlp_eng_task_train.csv - data on which models were trained, tested, and evaluated
 
-5. last_model.pkl & predictions.csv - last saved model and predictions for quick testing/reference
+5. predictions.csv - predictions on a small subset from the last classification test for quick reference
 
 II. WORKFLOW AND ALGORITHMS
 
@@ -41,8 +41,8 @@ For future improvements see IV.
 
 III. TECHNICAL REQUIREMENTS, SOFTWARE, AND PERFORMANCE
 The task was completed on Ubuntu 14.04 with Python 3.4. The ML library is sklearn.
-The developement machine is very old laptop Lenovo Ideapad 100 with Intel Celeron CPU and 4Gb RAM.
-Training on this antique showpiece takes ~30 minutes, any decent machine would probably do it in less than 5 minutes.
+Training on Lenovo Ideapad 100 with Intel Celeron CPU and 4Gb RAM takes ~30 minutes, 
+any decent machine would probably do it much faster.
 
 IV. FUTURE DEVELOPMENTS, IMPROVEMENTS, TODOs
 As this was just a test task, very much work remains uncovered and there are lots of things to add/improve.
@@ -57,8 +57,8 @@ Some of them include:
 serious problems with installing appropriate libraries on my [non-]working station)
 
 2. API/code-wise
-- testing! testing! testing! sanity (done partially), integration (since it is an API), unit testing, etc.
-- proper error handling & Success/Failure/Error Code return values for each API call (in other words,
+- testing! testing! testing! sanity (done partially), integration, unit testing, etc.
+- proper error handling & Success/Failure/ErrorCode return values for each API call (in other words,
     making it a proper API)
 - proper documentation (including this README), docstrings
 - organizing separate folders for code, models, and data 
