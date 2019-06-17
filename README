@@ -1,0 +1,73 @@
+I. Solution contents
+
+1. MLClassifier.py - API framework that supports the following operations:
+    train - trains model on train data, saves it and returns it to user
+    evaluate - evaluates model on test data, returns the evaluation score to user
+    classify - classifies given dataset and returns classification labels, vectorized or textual
+    classify_single_text - classifies single text (string) and returns textual labels
+    saveModel - saves model to disk
+    loadModel - loads model from disk
+
+This particular system design seems to cover all basic use cases and can be extended further without breaking
+the internals.
+
+2. API_usage_example.py - an example of how the API can be used, simulates a normal use case,
+with printouts of its run
+
+3. Utilities.py - utility methods file
+
+4. nlp_eng_task_train.csv - data on which models were trained, tested, and evaluated
+
+5. last_model.pkl & predictions.csv - last saved model and predictions for quick testing/reference
+
+
+II. Workflow and algorithms.
+
+At first data was examined and simple baseline was developed. It included choosing just 3 main textual columns from
+the dataset which seemed to include the most relevant textual information necessary for classification -
+Title, Description, About. No data preprossing was performed at this stage.
+Also, 3 basic ML algorithms were chosen with OneVsRest classification on top for multilabling:
+- Multinomial naive bayes
+- SGD
+- Logistic Regression
+The latter showed the best results, so it was picked to proceed with. However, the baseline showed relatively low
+accuracy (around 56%, showed by both accuracy_score from sklearn and Hamming score), therefore, further development was needed. After much work and experimenting, the solution became
+to include:
+ - almost all textual features from the data (11 columns)
+ - text cleaning
+ - grid search with cross-validation for choosing the best model
+This set-up returns accuracy around 84% which seems to be sufficient for the purposes of this task.
+For future improvements see IV.
+
+III. Technical requirements, software, and performance.
+The task was completed on Ubuntu 14.04 with Python 3.4. The ML library is sklearn.
+The developement machine is very old laptop Lenovo Ideapad 100 with Intel Celeron CPU and 4Gb RAM.
+Training on this antique showpiece takes ~30 minutes, any decent machine would probably do it in less than 5 minutes.
+
+IV. Future developments, improvements, TODOs.
+As this was just a test task, very much work remains uncovered and there are lots of things to add/improve.
+Some of them include:
+
+1. model-wise:
+- existing model tweaking
+- training on more data
+- including numeric features as well (probably redundant)
+- exploring other ML models on this data
+- exloring DL solutions (should work better; this was the initial direction but it was dropped after encountering
+serious problems with installing appropriate SW on my [non-]working station)
+
+2. API/code-wise
+- testing! testing! testing! sanity (done partially), integration (since it is an API), unit testing, etc.
+- proper error handling & Success/Failure/Error Code return values for each API call (in other words,
+    making it a proper API)
+- proper documentation (including this README), docstrings
+- organizing separate folders for code and data
+- implementing models versioning
+- implementing logging
+- getting rid of all the warnings at run-time
+- implementing REST API (should be easy with Flask)
+- providing a user with an opportunity to choose algorithms for training
+  (whether DL/ML and/or inside of these categories)
+- in general, providing greater flexibility and support for various use cases (adding new training data, for instance)
+- learning and using DS best practices, paradigms, naming conventions, etc. which I am currently not
+  aware of, having almost no hands-on DS experience and aspiring to gain as much as possible as soon as possible :)
