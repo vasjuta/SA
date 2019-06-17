@@ -2,7 +2,8 @@
 Example script of the API usage.
 It shows a simple use case:
 1. split your data as you like
-2. call the API for this chain of actions: train -> evaluate -> save model -> load model -> classify
+2. call the API for this chain of actions: 
+train -> evaluate -> save model -> load model -> classify -> (*bonus) classify single text
 
 Obviously, it can be altered for any particular use case.
 
@@ -29,6 +30,7 @@ model = classifier_api.train(train)
 #evaluate the model
 scores = classifier_api.evaluate(model, test)
 print(scores)
+#{'hamming loss': 0.007518796992481203, 'hamming score': 0.8425438596491227, 'accuracy': 0.8}
 
 #you like the scores, save this model for future use with the current date/time
 model_tosave = "model_" + datetime.today().strftime('%Y-%m-%d_%H:%M')
