@@ -1,0 +1,81 @@
+,predicted,true
+1915,"('Oats',)",Oats
+1916,"('Oats',)",Oats
+1917,"('General Rice',)",General Rice
+1918,"('Basmati Rice',)",Basmati Rice;General Rice
+1919,(),General Beans
+1920,(),Arborio Rice
+1921,"('Oats',)",Oats
+1922,"('Quinoa',)",General Rice;Quinoa
+1923,(),Black (Turtle) Beans;Quinoa
+1924,"('Oats',)",Oats
+1925,"('Oats',)",Oats
+1926,"('General Rice',)",General Rice
+1927,"('Oats',)",Oats
+1928,"('General Rice',)",General Rice
+1929,"('General Rice',)",General Rice
+1930,"('Arborio Rice',)",Arborio Rice
+1931,"('General Rice',)",General Rice
+1932,"('General Rice',)",General Rice
+1933,"('General Rice',)",General Rice
+1934,"('Oats',)",Oats
+1935,"('General Rice',)",General Rice
+1936,"('Oats',)",Oats
+1937,"('Oats',)",Oats
+1938,"('Oats',)",Oats
+1939,"('General Rice',)",Wild Rice
+1940,"('General Rice',)",General Rice
+1941,"('General Rice',)",General Rice
+1942,"('Oats',)",Oats
+1943,(),Wild Rice
+1944,"('Oats',)",Oats
+1945,"('Oats',)",Oats
+1946,(),General Rice
+1947,(),Kidney/Red Beans
+1948,"('General Rice',)",General Rice
+1949,"('Wholegrain/Brown Rice',)",Wholegrain/Brown Rice
+1950,"('General Rice',)",White Rice
+1951,"('General Rice',)",General Rice
+1952,(),Semolina
+1953,"('Oats',)",Oats
+1954,(),General Rice
+1955,"('General Rice',)",General Rice
+1956,"('General Rice',)",General Rice
+1957,"('Couscous',)",Couscous
+1958,"('General Rice',)",General Rice
+1959,"('Rye',)",Rye
+1960,"('Oats',)",Oats
+1961,"('Oats',)",Oats
+1962,"('Oats',)",Oats
+1963,"('Oats',)",Oats
+1964,"('General Rice',)",General Rice
+1965,"('General Rice',)",Couscous
+1966,"('Jasmine/Thai Rice',)",Jasmine/Thai Rice
+1967,"('Oats',)",Oats
+1968,"('General Rice',)",General Rice
+1969,(),General Beans
+1970,"('Quinoa',)",Quinoa
+1971,"('General Rice', 'Wild Rice')",General Rice;Wild Rice
+1972,"('Chickpeas',)",Chickpeas
+1973,"('White Rice',)",White Rice
+1974,"('General Rice',)",General Rice
+1975,"('Oats',)",Oats
+1976,"('General Rice',)",General Rice
+1977,(),General Rice
+1978,"('General Rice',)",General Rice
+1979,"('Oats',)",Oats
+1980,"('Oats',)",Oats
+1981,"('Wholegrain/Brown Rice',)",Wholegrain/Brown Rice
+1982,"('Wholegrain/Brown Rice',)",White Rice;Wholegrain/Brown Rice
+1983,"('Wheat Grains',)",Wheat Grains
+1984,"('Jasmine/Thai Rice',)",Jasmine/Thai Rice
+1985,"('General Rice',)",General Rice
+1986,"('Oats',)",Oats
+1987,"('Oats',)",Oats
+1988,"('General Rice',)",General Rice
+1989,"('General Rice',)",General Rice
+1990,"('Wheat Grains',)",Wheat Grains
+1991,"('Basmati Rice', 'General Rice')",Basmati Rice
+1992,"('General Rice',)",General Rice
+1993,"('General Rice',)",General Rice
+1994,"('Oats',)",Oats
