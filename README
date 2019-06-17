@@ -23,15 +23,15 @@ with printouts of its run
 II. WORKFLOW AND ALGORITHMS
 
 At first data was examined and simple baseline was developed. It included choosing just 3 main textual columns from
-the dataset which seemed to include the most relevant textual information necessary for classification -
+the dataset which seemed to hold the most relevant textual information necessary for classification -
 Title, Description, About. No data preprossing was performed at this stage.
-Also, 3 basic ML algorithms were chosen with OneVsRest classification on top for multilabling:
+Also, 3 basic ML algorithms were tested with OneVsRest classification on top for multilabling:
 - Multinomial naive bayes
 - SGD
 - Logistic Regression
 The latter showed the best results, so it was picked to proceed with. However, the baseline demonstrated relatively low
-accuracy (around 56%, by both accuracy_score from sklearn and Hamming score), therefore, further development was needed. After much work, learning,
-and experimenting, the solution became to include:
+accuracy (around 56%, by both accuracy_score from sklearn and Hamming score), therefore, further development was needed. 
+After much learning and experimenting, the solution became to include:
  - almost all textual features from the data (11 columns)
  - text cleaning
  - grid search with cross-validation for choosing the best model
@@ -67,7 +67,6 @@ serious problems with installing appropriate libraries on my [non-]working stati
 - getting rid of all the warnings at run-time
 - REST API (should be easy with Flask)
 - providing a user with an opportunity to choose algorithms for training
-  (whether DL/ML and/or inside of these categories)
 - in general, providing greater flexibility and support for various use cases (adding new training data, for instance)
 - learning and using DS best practices, paradigms, naming conventions, etc. which I am currently not
   aware of, having almost no hands-on DS experience and aspiring to gain as much as possible as soon as possible :)
