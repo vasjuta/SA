@@ -287,7 +287,6 @@ class MLClassifierAPI(object):
         
         if not name:
             if self.model is not None:  # we can use the one we have loaded
-                print(3)
                 print("In-memory model will be used.")
                 return
             else:
